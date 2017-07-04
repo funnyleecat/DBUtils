@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DBGV>
+	<DBLogicNode UniqueId="lifengDB">
+		<DBInstanceNode hostName="127.0.0.1" portNum="1521" dbName="XE" usrName="lifeng" password="lifeng" rwType="WO" dbType="ORACLE" connectionNum="1" heartBeatCycle="300">
+		</DBInstanceNode>
+		<DBInstanceNode hostName="127.0.0.1"  portNum="1521" dbName="XE" usrName="lifeng" password="lifeng" rwType="RO" dbType="ORACLE" connectionNum="1" heartBeatCycle="300">
+		</DBInstanceNode>		
+	</DBLogicNode>
+	<DBLogicNode UniqueId="newLifengDB">
+		<DBInstanceNode hostName="127.0.0.1" portNum="1521" dbName="XE" usrName="lifeng" password="lifeng" rwType="WO" dbType="ORACLE" connectionNum="1" heartBeatCycle="300">
+		</DBInstanceNode>
+	</DBLogicNode>	
+</DBGV>

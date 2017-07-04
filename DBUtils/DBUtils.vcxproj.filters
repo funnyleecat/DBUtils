@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="外部接口">
+      <UniqueIdentifier>{e1ba2ca4-04ac-4fb9-9686-ab1804fc439c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Oracle">
+      <UniqueIdentifier>{d7aa5099-10bf-4d1c-943c-96557c9900ee}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\oracle\OracleConnectionWrapper.cpp">
+      <Filter>Oracle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\oracle\OraPool.cpp">
+      <Filter>Oracle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DBConnectionWrapper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DBExpection.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DBMgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DBPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DBProfile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DBSvrCfg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Statement.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\UtilsCommon.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TimerTaskMgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TimerGuard.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\inc\DBConnectionWrapper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\DBPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\DBProfile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\DBStatementFacade.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\DBSvrCfg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\ExpectionFacade.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\OracleConnectionWrapper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\OracleDBIterator.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\OraPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\UtilsCommon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\DBExpection.h">
+      <Filter>外部接口</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\DBIterator.h">
+      <Filter>外部接口</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\DBMgr.hpp">
+      <Filter>外部接口</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\Export.h">
+      <Filter>外部接口</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\ExportDef.hpp">
+      <Filter>外部接口</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\Statement.h">
+      <Filter>外部接口</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\TimerTaskMgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\VarVisitor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\TimerGuard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
