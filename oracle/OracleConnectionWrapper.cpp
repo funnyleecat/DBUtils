@@ -104,10 +104,36 @@ namespace DBUtils {
 			rPtr->InitResultSet();
 			return rPtr;
 		}
-		catch (std::exception &ex)
+		catch (ocilib::Exception &ex)
 		{
+			//#define ORA_ERR_DISCONNECT    3134
+			//#define ORA_ERR_DISCONNECT2   3135 
+			//#define ORA_ERR_BREAK         1013
 			m_hOraConn.Rollback();
-			throw CExpectionFacade(ex.what(), ORA_EXECUTE_ERROR);
+			throw CExpectionFacade(ex.what(), ConvertErrorCode(ex.GetOracleErrorCode()));
+		}
+	}
+
+	long COracleConnectionWrapper::ConvertErrorCode(int oraCode)
+	{
+		#define ORA_ERR_BREAK         1013
+		#define ORA_ERR_DISCONNECT    3134
+		#define ORA_ERR_DISCONNECT2   3135 
+		if (oraCode == ORA_ERR_BREAK)
+		{
+			return ORA_EXECUTE_TIMEOUT;
+		}
+		else if (oraCode == ORA_ERR_DISCONNECT)
+		{
+			return ORA_EXECUTE_DISCONNECT;
+		}
+		else if (oraCode == ORA_ERR_DISCONNECT2)
+		{
+			return ORA_EXECUTE_DISCONNECT;
+		}
+		else
+		{
+			return ORA_EXECUTE_ERROR;
 		}
 	}
 

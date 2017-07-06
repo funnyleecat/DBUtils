@@ -74,8 +74,8 @@ void CORAPool::InitEnv()
 	try
 	{
 		string strOciPath;
-		CheckEnvVariable(strOciPath);
-		Environment::Initialize(Environment::Default | Environment::Threaded, strOciPath.c_str());
+		//CheckEnvVariable(strOciPath);
+		Environment::Initialize(Environment::Default | Environment::Threaded);
 		Environment::EnableWarnings(true);
 	}
 	catch (...)
@@ -90,6 +90,7 @@ void CORAPool::ReleaseEnv()
 	Environment::Cleanup();
 }
 
+/*
 void CORAPool::CheckEnvVariable(string &strOciPath)
 {
 	std::string strEnvPath = GetEnvVariable(DT_DB_NLS_LANG_NAME);
@@ -107,7 +108,7 @@ void CORAPool::CheckEnvVariable(string &strOciPath)
 	{
 		strOciPath = strEnvPath;
 	}
-}
+}*/
 
 Utils::CIOCCreater<DBType, CDBPoolItf> CDBPoolItf::sm_PoolCreater;
 CORAPool::AutoReg CORAPool::sm_AutoReg(CDBPoolItf::sm_PoolCreater);

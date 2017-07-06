@@ -42,7 +42,7 @@ namespace DBUtils
 		size_t GetMaxSize(const StrVariantBindInTypeMap &inVariantBindTypeMap);
 		template<typename T, typename Visitor>
 		void Bind(std::map<std::string, T> &map, Statement &st);	
-		
+		long ConvertErrorCode(int oraCode);
 	private:
 		std::string const m_strDBName;
 		std::string const m_strUName;

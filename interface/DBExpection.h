@@ -24,6 +24,8 @@ const long DB_VALUE_IS_NOT_EXSIT = 11;
 const long DB_NULL_PTR = 12;
 const long DB_BIND_UNKNOWN = 13;
 const long DB_TIMEOUT_UNKNOWN = 14;
+const long ORA_EXECUTE_TIMEOUT = 15;
+const long ORA_EXECUTE_DISCONNECT = 16;
 
 namespace DBUtils
 {
