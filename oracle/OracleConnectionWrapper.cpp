@@ -6,6 +6,7 @@
 #include <boost/atomic.hpp>
 #include <boost/ref.hpp>
 #include "VarVisitor.h"
+//#include "StaticAutoReg.h"
 
 namespace DBUtils {
 	
@@ -198,6 +199,6 @@ namespace DBUtils {
 		m_hOraConn.Close();
 	}
 
-	Utils::CIOCCreaterWithParam<DBType, CConnectionWrapper, const CreateConnParam &> CConnectionWrapper::sm_PoolCreater;
-	COracleConnectionWrapper::AutoReg COracleConnectionWrapper::sm_AutoReg(CConnectionWrapper::sm_PoolCreater);
+	//Utils::CIOCCreaterWithParam<DBType, CConnectionWrapper, const CreateConnParam &> CConnectionWrapper::sm_PoolCreater;
+	//COracleConnectionWrapper::AutoReg COracleConnectionWrapper::sm_AutoReg(CConnectionWrapper::sm_PoolCreater);
 }

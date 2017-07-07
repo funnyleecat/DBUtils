@@ -75,7 +75,10 @@ namespace DBUtils {
 		virtual bool Init(const std::string &strInitPath)
 		{
 			TiXmlDocument xmlDoc(strInitPath.c_str());
-			if (!xmlDoc.LoadFile(TIXML_ENCODING_UTF8))return false;
+			if (!xmlDoc.LoadFile(TIXML_ENCODING_UTF8))
+			{
+				throw CExpectionFacade("Config file is not find", DB_CFG_INITERROR);
+			}
 			for (TiXmlElement *pXmlRoot = xmlDoc.RootElement(); pXmlRoot; pXmlRoot = pXmlRoot->NextSiblingElement())
 			{
 				std::string strValue = pXmlRoot->Value();				

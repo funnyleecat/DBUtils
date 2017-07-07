@@ -120,17 +120,6 @@ void CDBPoolItf::DisablePool()
 boost::shared_ptr<CDBPoolItf> CDBPoolItf::Create(DBType eDBType)
 {
 	return boost::shared_ptr<CDBPoolItf>(sm_PoolCreater.GetRegisterType(eDBType));
-	/*
-	CreatePoolFuncMap::iterator iter = CCreatePoolProxy::sm_createPoolFuncMap.find(eDBType);
-	if (iter != CCreatePoolProxy::sm_createPoolFuncMap.end())
-	{
-		return (iter->second)();
-	}
-	else
-	{
-		CDBPoolItf *pPool = NULL;
-		return boost::shared_ptr<CDBPoolItf>(pPool);
-	}*/
 }
  
 

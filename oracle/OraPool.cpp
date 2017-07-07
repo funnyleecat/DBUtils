@@ -4,6 +4,7 @@
 #include "DBSvrCfg.h"
 #include "ExpectionFacade.h"
 #include "UtilsCommon.h"
+//#include "StaticAutoReg.h"
 
 namespace DBUtils {
 
@@ -110,8 +111,8 @@ void CORAPool::CheckEnvVariable(string &strOciPath)
 	}
 }*/
 
-Utils::CIOCCreater<DBType, CDBPoolItf> CDBPoolItf::sm_PoolCreater;
-CORAPool::AutoReg CORAPool::sm_AutoReg(CDBPoolItf::sm_PoolCreater);
+//Utils::CIOCCreater<DBType, CDBPoolItf> CDBPoolItf::sm_PoolCreater;
+//CORAPool::AutoReg CORAPool::sm_AutoReg(CDBPoolItf::sm_PoolCreater);
 
 }
 

@@ -171,6 +171,7 @@
     <ClCompile Include="..\src\DBProfile.cpp" />
     <ClCompile Include="..\src\DBSvrCfg.cpp" />
     <ClCompile Include="..\src\Statement.cpp" />
+    <ClCompile Include="..\src\StaticAutoReg.cpp" />
     <ClCompile Include="..\src\TimerGuard.cpp" />
     <ClCompile Include="..\src\TimerTaskMgr.cpp" />
     <ClCompile Include="..\src\UtilsCommon.cpp" />
